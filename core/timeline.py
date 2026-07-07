@@ -324,4 +324,3 @@ def _add_temperature_measurements(min_date, max_date, events, child):
                 "tags": instance.tags.all(),
             }
         )
-
