@@ -171,7 +171,7 @@ def _add_feedings(min_date, max_date, events, child=None):
                     "time_since_prev": time_since_prev,
                     "type": "start",
                 }
-                events.extend(start_event)
+                events.append(start_event)
 
             if min_date <= instance.end <= max_date:
                 end_event = {
@@ -183,7 +183,7 @@ def _add_feedings(min_date, max_date, events, child=None):
                     "duration": duration_string(instance.duration),
                 }
 
-                events.extend(end_event)
+                events.append(end_event)
         else:
             if min_date <= instance.start <= max_date:
                 feed_event = {
